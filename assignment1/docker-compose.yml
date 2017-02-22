@@ -1,0 +1,16 @@
+version: '2'
+services:
+  myapp:
+    build: app
+    restart: always
+    ports:
+      - 8080:8000
+    volumes:
+      - ./app:/code
+  expressjsapp:
+    build: expressjsapp
+    restart: always
+    ports:
+      - 9000:3000
+    volumes:
+      - ./expressjsapp:/code
